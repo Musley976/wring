@@ -1,3 +1,5 @@
+// love-website/scripts/proposal.js
+
 const ringModel = document.getElementById('ringModel');
 const proposalText = document.getElementById('proposal-text');
 const yesBtn = document.getElementById('yes-button');
@@ -7,12 +9,15 @@ const tapHint = document.querySelector('.tap-hint');
 
 let started = false;
 
-ringModel.addEventListener('click', () => {
+// Listen for when animation actually plays (not just click)
+ringModel.addEventListener("play", () => {
   if (started) return;
   started = true;
 
+  // Hide tap hint
   if (tapHint) tapHint.style.display = 'none';
 
+  // Music fade in
   music.volume = 0;
   music.play();
   const fadeIn = setInterval(() => {
@@ -23,13 +28,14 @@ ringModel.addEventListener('click', () => {
     }
   }, 300);
 
+  // Emotional proposal lines
   const lines = [
     "Main hamesha sochta tha...",
     "Kya main kabhi kisi se itna pyaar kar paunga?",
     "Phir tum aayi — aur sab kuch badal gaya 💖",
     "Teri hansi meri zindagi ka sabab ban gayi...",
     "Ab har dua sirf tere naam se shuru hoti hai...",
-    "Aur aaj sirf ek sawal reh gaya hai —",
+    "Aur aaj sirf ek sawaal reh gaya hai —",
     "Kya tum meri zindagi bano gi? 💍"
   ];
 
