@@ -1,5 +1,3 @@
-// love-website/scripts/proposal.js
-
 const ringModel = document.getElementById('ringModel');
 const proposalText = document.getElementById('proposal-text');
 const yesBtn = document.getElementById('yes-button');
@@ -13,10 +11,8 @@ ringModel.addEventListener('click', () => {
   if (started) return;
   started = true;
 
-  // Hide tap hint
   if (tapHint) tapHint.style.display = 'none';
 
-  // Start background music (fade in)
   music.volume = 0;
   music.play();
   const fadeIn = setInterval(() => {
@@ -27,7 +23,6 @@ ringModel.addEventListener('click', () => {
     }
   }, 300);
 
-  // Show proposal text line by line
   const lines = [
     "Main hamesha sochta tha...",
     "Kya main kabhi kisi se itna pyaar kar paunga?",
