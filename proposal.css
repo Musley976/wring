@@ -1,0 +1,125 @@
+/* love-website/styles/proposal.css */
+
+:root {
+  --rose: #ff4d79;
+  --blush: #ffc5da;
+  --gold: #ffd700;
+  --deep: #2a001f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at center, #2a001f, #1a0010);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Main container */
+.proposal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Tap hint */
+.tap-hint {
+  margin-top: 1rem;
+  color: var(--blush);
+  font-family: 'Sacramento', cursive;
+  font-size: 1.6rem;
+  animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Proposal message */
+#proposal-text {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-family: 'Sacramento', cursive;
+  color: var(--gold);
+  max-width: 90%;
+  line-height: 2.4rem;
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
+}
+
+/* Fade in text */
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* YES Button */
+#yes-button {
+  margin-top: 2rem;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to right, var(--rose), var(--gold));
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--rose);
+  transition: 0.3s ease;
+}
+
+#yes-button:hover {
+  transform: scale(1.08);
+  background: linear-gradient(to right, var(--gold), var(--rose));
+}
+
+/* Easter Egg Hearts */
+.easter-heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--rose);
+  clip-path: polygon(
+    50% 0%,
+    61% 11%,
+    100% 35%,
+    100% 65%,
+    50% 100%,
+    0% 65%,
+    0% 35%,
+    39% 11%
+  );
+  cursor: pointer;
+  display: none;
+  animation: float 6s infinite ease-in-out;
+  filter: drop-shadow(0 0 6px var(--rose));
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -15px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Responsive 3D Model Viewer */
+model-viewer {
+  width: 300px;
+  height: 300px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none;
+}
