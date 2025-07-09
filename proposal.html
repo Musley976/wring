@@ -19,14 +19,18 @@
   <div id="magic-container"></div>
 
   <div class="proposal-container">
-   <model-viewer
-  src="ring_box_animation.glb"
-  autoplay
+<model-viewer
+  id="ringModel"
+  src="../assets/models/ring_box_animation.glb"
+  animation-name="Animation"
+  animation-crossfade-duration="0.5"
   disable-zoom
   camera-controls="false"
   interaction-prompt="none"
-  style="width: 300px; height: 300px;"
+  reveal="interaction"
+  style="width: 320px; height: 320px; background: transparent; cursor: pointer;"
 ></model-viewer>
+
 
 
     <p class="tap-hint">Tap the box to open... 💍</p>
