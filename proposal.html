@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mujhse Shaadi Karogi? 💍</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="proposal.css" />
-  <link rel="stylesheet" href="universal-magic.css" />
-
-  <!-- Model Viewer -->
+  <meta charset="UTF-8">
+  <title>Turbo Ring Test 💍</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
 </head>
 <body>
-  <div id="magic-container"></div>
 
-  <div class="proposal-container">
-<model-viewer
-  id="ringModel"
-  src="ring_box_animation.glb"
-  animation-name="Animation_0"
-  animation-crossfade-duration="0.5"
-  disable-zoom
-  camera-controls="false"
-  interaction-prompt="none"
-  reveal="interaction"
-  style="width: 320px; height: 320px; background: transparent; cursor: pointer;"
-></model-viewer>
+  <model-viewer
+    id="ringModel"
+    src="/assets/models/ring_box_animation.glb"
+    alt="Ring Box"
+    animation-name="Animation"
+    reveal="interaction"
+    disable-zoom
+    camera-controls="false"
+    interaction-prompt="none"
+    style="width: 320px; height: 320px; background: transparent;"
+  ></model-viewer>
 
-
-
-    <p class="tap-hint">Tap the box to open... 💍</p>
-    <div id="proposal-text" class="hidden"></div>
-    <button id="yes-button" class="hidden">YES 💖</button>
-  </div>
-
-  <!-- Easter Egg Hearts -->
-  <div class="easter-heart" style="top: 15%; left: 20%;"></div>
-  <div class="easter-heart" style="top: 55%; left: 70%; animation-delay: 1s;"></div>
-  <div class="easter-heart" style="top: 70%; left: 35%; animation-delay: 2s;"></div>
-
-  <!-- Background Music -->
-  <audio id="bg-music" src="../assets/voice-notes/proposal-theme.mp3" loop></audio>
-
-  <!-- Scripts -->
-  <script src="universal-magic.js"></script>
-  <script src="proposal.js"></script>
 </body>
 </html>
